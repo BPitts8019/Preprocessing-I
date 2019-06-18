@@ -135,3 +135,7 @@ body {
   height: 100%;
 }
 /** End CSS Reset **/
+html {
+  font-size: 62.5%;
+  /** Setup Base-10 sizing for rem units**/
+}
