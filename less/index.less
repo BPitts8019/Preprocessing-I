@@ -58,6 +58,31 @@ html, body {
 }
 /** End CSS Reset **/
 
+// Variables //
+@main-font: Arial, Helvetica, sans-serif;
+@main-color: dodgerblue;
+@secondary-color: #ed1c24;
+@tertiary-color: #3d2c2c;
+
+/** Generic Styles **/
 html {
-   font-size: 62.5%; /** Setup Base-10 sizing for rem units**/
+   /** Setup Base-10 sizing for rem units**/
+   font-size: 62.5%;
+}
+
+.content {
+   margin: 0 auto;
+   width: 900px;
+   font-family: @main-font;
+
+
+
+   nav {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+         text-decoration: none;
+      }
+   }
 }

@@ -135,7 +135,20 @@ body {
   height: 100%;
 }
 /** End CSS Reset **/
+/** Generic Styles **/
 html {
-  font-size: 62.5%;
   /** Setup Base-10 sizing for rem units**/
+  font-size: 62.5%;
+}
+.content {
+  margin: 0 auto;
+  width: 900px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.content nav a {
+  text-decoration: none;
 }
