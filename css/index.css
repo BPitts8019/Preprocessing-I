@@ -190,7 +190,7 @@ h6 {
   color: #f2ecdd;
   font: 1.6rem 'Cabin', Sans-Serif;
   margin: 0 auto;
-  width: 900px;
+  width: 1024px;
 }
 .content header {
   height: 6rem;
@@ -199,15 +199,28 @@ h6 {
   display: flex;
   justify-content: flex-end;
 }
+@media only screen and (max-width: 500px) {
+  .content header {
+    justify-content: center;
+  }
+}
 .content header nav {
   width: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 500px) {
+  .content header nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
 .content header nav a {
   color: #f2ecdd;
+  padding: 0.7rem;
   text-decoration: none;
+  width: 7.5rem;
 }
 .content header nav a:visited {
   color: #f2ecdd;
@@ -217,20 +230,29 @@ h6 {
 }
 .content .table-wrapper {
   display: flex;
-  flex-wrap: nowrap;
   width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .content .table-wrapper .intro {
   text-align: center;
-}
-.content .table-wrapper section {
   width: 39%;
 }
-.content .table-wrapper section img {
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .intro {
+    width: 100%;
+    display: flex;
+  }
+}
+.content .table-wrapper .intro img {
   border: 0.7rem solid #3d314a;
   border-radius: 49%;
-  margin: 2rem;
-  width: 15rem;
+  margin: 2.5rem;
+  width: 19rem;
 }
 .content .table-wrapper section .heading {
   background-color: #3d314a;
@@ -242,6 +264,11 @@ h6 {
   color: #1a1423;
   width: 69%;
 }
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .profile {
+    width: 95%;
+  }
+}
 .content .table-wrapper .profile .titles {
   background-color: #ddd1c7;
   font-weight: bold;
@@ -249,8 +276,18 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .profile .titles {
+    justify-content: center;
+  }
+}
 .content .table-wrapper .profile .titles li {
   font-style: italic;
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .profile .titles li {
+    margin: 0 4rem;
+  }
 }
 .content .table-wrapper .profile .profile-info {
   padding: 0 1rem 1rem;

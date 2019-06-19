@@ -87,6 +87,9 @@ html, body {
 // @link-visited: @attention-border;
 @link-hover: @subtle-border;
 
+   // Other Variables //
+@mobile-screen: 500px;
+
 // Mixins //
 .header-text() {
    display: block;
@@ -147,7 +150,7 @@ h6 {
    color: @light-text;
    font: 1.6rem @body-font;
    margin: 0 auto;
-   width: 900px;
+   width: 1024px;
 
    header {
       // border: 2px solid magenta;
@@ -155,6 +158,10 @@ h6 {
       
       display: flex;
       justify-content: flex-end;
+
+      @media only screen and (max-width: @mobile-screen) {
+         justify-content: center;
+      }
 
       nav {
          // border: 2px solid yellow;
@@ -164,9 +171,16 @@ h6 {
          justify-content: space-between;
          align-items: center;
 
+         @media only screen and (max-width: @mobile-screen) {
+            width: 100%;
+            justify-content: space-around;
+         }
+
          a {
             color: @link;
+            padding: 0.7rem;
             text-decoration: none;
+            width: 7.5rem;
          }
          a:visited {
             color: @link-visited;
@@ -179,24 +193,32 @@ h6 {
 
    .table-wrapper {
       display: flex;
-      flex-wrap: nowrap;
       width: 100%;
 
+      @media only screen and (max-width: @mobile-screen) {
+         flex-direction: column;
+         align-items: center;
+      }
+      
       .intro {
          text-align: center;
-      }
-
-      section {
-         // border: 2px solid cyan;
          width: 39%;
+
+         @media only screen and (max-width: @mobile-screen) {
+            width: 100%;
+
+            display: flex;
+         }
 
          img {
             border: 0.7rem solid @attention-border;
             border-radius: 49%;
-            margin: 2rem;
-            width: 15rem;
+            margin: 2.5rem;
+            width: 19rem;
          }
+      }
 
+      section {
          .heading {
             background-color: @attention-border;
             padding: 0.7rem 0;
@@ -221,6 +243,10 @@ h6 {
          color: @dark-text;
          width: 69%;
 
+         @media only screen and (max-width: @mobile-screen) {
+            width: 95%;
+         }
+
          .titles {
             background-color: @subtle-border;
             font-weight: bold;
@@ -229,8 +255,16 @@ h6 {
             display: flex;
             justify-content: space-between;
 
+            @media only screen and (max-width: @mobile-screen) {
+               justify-content: center;
+            }
+
             li {
                font-style: italic;
+
+               @media only screen and (max-width: @mobile-screen) {
+                  margin: 0 4rem;
+               }
             }
          }
 
