@@ -96,6 +96,7 @@ html, body {
 .header-footer() {
    height: 6rem;
    padding: 1rem;
+   width: 100%;
 }
 
 /** Generic Styles **/
@@ -178,17 +179,13 @@ h6 {
 
    .table-wrapper {
       display: flex;
-      flex-flow: column wrap;
-
-      /** this class will center text within the .table-wrapper **/
-      .center {
-         text-align: center;
-      }
+      flex-wrap: nowrap;
+      width: 100%;
 
       section {
          border: 2px solid cyan;
          width: 39%;
-   
+
          img {
             border: 0.7rem solid @attention-border;
             border-radius: 49%;
@@ -196,19 +193,32 @@ h6 {
             width: 15rem;
          }
 
-         .heading {
+         .name {
             background-color: @attention-border;
             padding: 0.7rem 0;
             text-align: center;
+
+            .titles {
+               border-top: 1px solid @eggShell;
+               margin: 0.5rem 0;
+               display: flex;
+               justify-content: space-between;
+
+               span {
+                  font-style: italic;
+               }
+            }
          }
 
          ul {
             font-size: 1.6rem;
             font-style: italic;
             font-weight: normal;
+            list-style-type: circle;
             padding: 1.6rem 0;
 
             display: flex;
+            flex-flow: column wrap;
             justify-content: space-between;
          }
       }

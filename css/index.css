@@ -195,6 +195,7 @@ h6 {
 .content header {
   height: 6rem;
   padding: 1rem;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -216,11 +217,8 @@ h6 {
 }
 .content .table-wrapper {
   display: flex;
-  flex-flow: column wrap;
-  /** this class will center text within the .table-wrapper **/
-}
-.content .table-wrapper .center {
-  text-align: center;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 .content .table-wrapper section {
   border: 2px solid cyan;
@@ -232,17 +230,28 @@ h6 {
   margin: 2rem;
   width: 15rem;
 }
-.content .table-wrapper section .heading {
+.content .table-wrapper section .name {
   background-color: #066331;
   padding: 0.7rem 0;
   text-align: center;
+}
+.content .table-wrapper section .name .titles {
+  border-top: 1px solid #f8f0d7;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.content .table-wrapper section .name .titles span {
+  font-style: italic;
 }
 .content .table-wrapper section ul {
   font-size: 1.6rem;
   font-style: italic;
   font-weight: normal;
+  list-style-type: circle;
   padding: 1.6rem 0;
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-between;
 }
 .content .table-wrapper .profile {
@@ -253,4 +262,5 @@ h6 {
 .content footer {
   height: 6rem;
   padding: 1rem;
+  width: 100%;
 }
