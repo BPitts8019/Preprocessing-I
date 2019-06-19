@@ -56,4 +56,281 @@ table {
 html, body {
     height: 100%;
 }
+/** End CSS Reset **/
 
+// Variables //
+   // Fonts //
+@header-font: 'Roboto Condensed', Sans-Serif;
+@body-font: 'Cabin', Sans-Serif;
+
+   // Color Palette //
+// @color-1: #0e1e2d;
+// @color-2: #2a85c3;
+// @color-3: #74b3ce;
+// @color-4: #e8f1f2;
+// @color-5: #72a23a;
+@color-1: #1a1423;
+@color-2: #3d314a;
+@color-3: #85756e;
+@color-4: #f2ecdd;
+@color-5: #ddd1c7;
+
+   // Colors //
+@attention-color: @color-3;
+@attention-border: @color-2;
+@subtle-border: @color-5;
+@bg-color: @color-4;
+@dark-text: @color-1;
+@light-text: @color-4;
+@link: @light-text;
+@link-visited: @light-text;
+// @link-visited: @attention-border;
+@link-hover: @subtle-border;
+
+   // Other Variables //
+@mobile-screen: 500px;
+
+// Mixins //
+.header-text() {
+   display: block;
+   font-weight: bold;
+}
+
+.header-footer() {
+   height: 6rem;
+   padding: 1rem;
+   width: 100%;
+}
+
+/** Generic Styles **/
+html {
+   /** Setup Base-10 sizing for rem units**/
+   font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: @header-font;
+}
+
+h1 {
+   .header-text;
+   font-size: 3.2rem;
+   margin: 1.072rem 0;
+}
+h2 {
+   .header-text;
+   font-size: 2.4rem;
+   margin: 1.328rem 0;
+}
+h3 {
+   .header-text;
+   font-size: 1.872rem;
+   margin: 2rem 0 1rem;
+}
+h4 {
+   .header-text;
+   font-size: 1.6rem;
+   margin: 2.128rem 0;
+}
+h5 {
+   .header-text;
+   font-size: 1.328rem;
+   margin: 2.672rem 0;
+}
+h6 {
+   .header-text;
+   font-size: 1.072rem;
+   margin: 3.728rem 0;
+}
+
+/** Page Specific Styles **/
+.content {
+   // border: 2px solid yellow;
+   background-color: @attention-color;
+   color: @light-text;
+   font: 1.6rem @body-font;
+   margin: 0 auto;
+   width: 1024px;
+
+   header {
+      // border: 2px solid magenta;
+      .header-footer;
+      
+      display: flex;
+      justify-content: flex-end;
+
+      @media only screen and (max-width: @mobile-screen) {
+         justify-content: center;
+      }
+
+      nav {
+         // border: 2px solid yellow;
+         width: 35%;
+
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         @media only screen and (max-width: @mobile-screen) {
+            width: 100%;
+            justify-content: space-around;
+         }
+
+         a {
+            color: @link;
+            padding: 0.7rem;
+            text-decoration: none;
+            width: 7.5rem;
+         }
+         a:visited {
+            color: @link-visited;
+         }
+         a:hover {
+            color: @link-hover;
+         }
+      }
+   }
+
+   .table-wrapper {
+      display: flex;
+      width: 100%;
+
+      @media only screen and (max-width: @mobile-screen) {
+         flex-direction: column;
+         align-items: center;
+      }
+      
+      .intro {
+         text-align: center;
+         width: 39%;
+
+         @media only screen and (max-width: @mobile-screen) {
+            width: 100%;
+
+            display: flex;
+         }
+
+         .intro-pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: @mobile-screen) {
+               margin-top: 1.072rem;
+               width: 39%;
+            }
+
+            img {
+               border: 0.8rem solid @attention-border;
+               border-radius: 49%;
+               margin: 2.5rem;
+               width: 25rem;
+
+               @media only screen and (max-width: @mobile-screen) {
+                  margin: 0;
+               }
+            }
+         }
+
+         .intro-info {
+            @media only screen and (max-width: @mobile-screen) {
+               width: 100%;
+            }
+
+            address {
+               @media only screen and (max-width: @mobile-screen) {
+                  display: flex;
+                  justify-content: space-evenly;
+                  padding-bottom: 1.6rem;
+               }
+            }
+
+            .skills-info {
+               ul {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+
+                  li {
+                     padding: 0.75rem 0;
+                     width: 33%;
+
+                     @media only screen and (max-width: @mobile-screen) {
+                        padding: 0.5rem 0;
+                        width: 15%;
+                     }
+                  }
+               }
+
+               ul:last-child {
+                  padding-bottom: 1.5rem;
+               }
+            }
+         }
+      }
+
+      section {
+         .heading {
+            background-color: @attention-border;
+            padding: 0.7rem 0;
+            text-align: center;
+         }
+
+         // ul {
+         //    font-size: 1.6rem;
+         //    font-style: italic;
+         //    font-weight: normal;
+         //    // list-style-type: circle;
+         //    padding: 1.6rem 0;
+
+         //    display: flex;
+         //    flex-flow: column wrap;
+         //    justify-content: space-between;
+         // }
+      }
+   
+      .profile {
+         background-color: @bg-color;
+         color: @dark-text;
+         width: 69%;
+
+         @media only screen and (max-width: @mobile-screen) {
+            width: 95%;
+         }
+
+         .titles {
+            background-color: @subtle-border;
+            font-weight: bold;
+            padding: 1rem;
+
+            display: flex;
+            justify-content: space-between;
+
+            @media only screen and (max-width: @mobile-screen) {
+               justify-content: center;
+            }
+
+            li {
+               font-style: italic;
+
+               @media only screen and (max-width: @mobile-screen) {
+                  margin: 0 4rem;
+               }
+            }
+         }
+
+         .profile-info {
+            padding: 0 1rem 1rem;
+         }
+      }
+   }
+
+   footer {
+      // border: 2px solid magenta;
+      .header-footer;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
