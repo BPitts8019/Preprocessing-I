@@ -140,15 +140,93 @@ html {
   /** Setup Base-10 sizing for rem units**/
   font-size: 62.5%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Condensed', Sans-Serif;
+}
+h1 {
+  display: block;
+  font-weight: bold;
+  font-size: 3.2rem;
+  margin: 1.072rem 0;
+}
+h2 {
+  display: block;
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin: 1.328rem 0;
+}
+h3 {
+  display: block;
+  font-weight: bold;
+  font-size: 1.872rem;
+  margin: 1.6rem 0;
+}
+h4 {
+  display: block;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 2.128rem 0;
+}
+h5 {
+  display: block;
+  font-weight: bold;
+  font-size: 1.328rem;
+  margin: 2.672rem 0;
+}
+h6 {
+  display: block;
+  font-weight: bold;
+  font-size: 1.072rem;
+  margin: 3.728rem 0;
+}
+/** Page Specific Styles **/
 .content {
+  background-color: #088d46;
+  color: #f8f0d7;
+  font: 1.6rem 'Cabin', Sans-Serif;
   margin: 0 auto;
   width: 900px;
-  font-family: Arial, Helvetica, sans-serif;
 }
-.content nav {
+.content header {
+  height: 6rem;
+  padding: 1rem;
   display: flex;
   justify-content: flex-end;
 }
-.content nav a {
+.content header nav {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content header nav a {
+  color: #f8f0d7;
   text-decoration: none;
+}
+.content header nav a:visited {
+  color: #f8f0d7;
+}
+.content header nav a:hover {
+  color: coral;
+}
+.content section {
+  border: 2px solid cyan;
+  width: 40%;
+}
+.content section img {
+  width: 10rem;
+  border-radius: 100%;
+}
+.content .profile {
+  background-color: #f8f0d7;
+  color: #353535;
+}
+.content footer {
+  height: 6rem;
+  padding: 1rem;
 }

@@ -59,10 +59,42 @@ html, body {
 /** End CSS Reset **/
 
 // Variables //
-@main-font: Arial, Helvetica, sans-serif;
-@main-color: dodgerblue;
-@secondary-color: #ed1c24;
-@tertiary-color: #3d2c2c;
+   // Fonts //
+   // Font-Family: 'Arvo', Serif;
+   // Font-Size: 44px;
+   // Font-Family: 'Lato', Sans-Serif;
+   // Font-Size: 16px;
+   //----------------------------------
+   // Font-Family: 'Roboto Condensed', Sans-Serif;
+   // Font-Size: 35px;
+   // Font-Family: 'Cabin', Sans-Serif;
+   // Font-Size: 16px;
+   
+@header-font: 'Roboto Condensed', Sans-Serif;
+@body-font: 'Cabin', Sans-Serif;
+   // Colors //
+@salem: #088d46;
+@eggShell: #f8f0d7;
+@coal: #353535;
+@attention-color: @salem;
+@bg-color: @eggShell;
+@dark-text: @coal;
+@light-text: @eggShell;
+@link: @light-text;
+@link-visited: @light-text;
+@link-hover: coral;
+// @link-active: coral;
+
+// Mixins //
+.header-text() {
+   display: block;
+   font-weight: bold;
+}
+
+.header-footer() {
+   height: 6rem;
+   padding: 1rem;
+}
 
 /** Generic Styles **/
 html {
@@ -70,19 +102,95 @@ html {
    font-size: 62.5%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+   font-family: @header-font;
+}
+
+h1 {
+   .header-text;
+   font-size: 3.2rem;
+   margin: 1.072rem 0;
+}
+h2 {
+   .header-text;
+   font-size: 2.4rem;
+   margin: 1.328rem 0;
+}
+h3 {
+   .header-text;
+   font-size: 1.872rem;
+   margin: 1.6rem 0;
+}
+h4 {
+   .header-text;
+   font-size: 1.6rem;
+   margin: 2.128rem 0;
+}
+h5 {
+   .header-text;
+   font-size: 1.328rem;
+   margin: 2.672rem 0;
+}
+h6 {
+   .header-text;
+   font-size: 1.072rem;
+   margin: 3.728rem 0;
+}
+
+/** Page Specific Styles **/
 .content {
+   // border: 2px solid yellow;
+   background-color: @attention-color;
+   color: @light-text;
+   font: 1.6rem @body-font;
    margin: 0 auto;
    width: 900px;
-   font-family: @main-font;
 
-
-
-   nav {
+   header {
+      // border: 2px solid magenta;
+      .header-footer;
+      
       display: flex;
       justify-content: flex-end;
 
-      a {
-         text-decoration: none;
+      nav {
+         // border: 2px solid yellow;
+         width: 35%;
+
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         a {
+            color: @link;
+            text-decoration: none;
+         }
+         a:visited {
+            color: @link-visited;
+         }
+         a:hover {
+            color: @link-hover;
+         }
       }
+   }
+
+   section {
+      border: 2px solid cyan;
+      width: 40%;
+
+      img {
+         width: 10rem;
+         border-radius: 100%;
+      }
+   }
+
+   .profile {
+      background-color: @bg-color;
+      color: @dark-text;
+   }
+
+   footer {
+      // border: 2px solid magenta;
+      .header-footer;
    }
 }
