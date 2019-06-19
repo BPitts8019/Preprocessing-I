@@ -164,7 +164,7 @@ h3 {
   display: block;
   font-weight: bold;
   font-size: 1.872rem;
-  margin: 1.6rem 0;
+  margin: 2rem 0 1rem;
 }
 h4 {
   display: block;
@@ -186,8 +186,8 @@ h6 {
 }
 /** Page Specific Styles **/
 .content {
-  background-color: #088d46;
-  color: #f8f0d7;
+  background-color: #85756e;
+  color: #f2ecdd;
   font: 1.6rem 'Cabin', Sans-Serif;
   margin: 0 auto;
   width: 900px;
@@ -206,58 +206,54 @@ h6 {
   align-items: center;
 }
 .content header nav a {
-  color: #f8f0d7;
+  color: #f2ecdd;
   text-decoration: none;
 }
 .content header nav a:visited {
-  color: #f8f0d7;
+  color: #f2ecdd;
 }
 .content header nav a:hover {
-  color: coral;
+  color: #ddd1c7;
 }
 .content .table-wrapper {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
 }
+.content .table-wrapper .intro {
+  text-align: center;
+}
 .content .table-wrapper section {
-  border: 2px solid cyan;
   width: 39%;
 }
 .content .table-wrapper section img {
-  border: 0.7rem solid #066331;
+  border: 0.7rem solid #3d314a;
   border-radius: 49%;
   margin: 2rem;
   width: 15rem;
 }
-.content .table-wrapper section .name {
-  background-color: #066331;
+.content .table-wrapper section .heading {
+  background-color: #3d314a;
   padding: 0.7rem 0;
   text-align: center;
 }
-.content .table-wrapper section .name .titles {
-  border-top: 1px solid #f8f0d7;
-  margin: 0.5rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-.content .table-wrapper section .name .titles span {
-  font-style: italic;
-}
-.content .table-wrapper section ul {
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: normal;
-  list-style-type: circle;
-  padding: 1.6rem 0;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-}
 .content .table-wrapper .profile {
-  background-color: #f8f0d7;
+  background-color: #f2ecdd;
   color: #353535;
   width: 69%;
+}
+.content .table-wrapper .profile .titles {
+  background-color: #ddd1c7;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.content .table-wrapper .profile .titles li {
+  font-style: italic;
+}
+.content .table-wrapper .profile .profile-info {
+  padding: 0 1rem 1rem;
 }
 .content footer {
   height: 6rem;

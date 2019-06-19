@@ -72,20 +72,33 @@ html, body {
    
 @header-font: 'Roboto Condensed', Sans-Serif;
 @body-font: 'Cabin', Sans-Serif;
-   // Colors //
+   // Color Palette //
+// @firefly: #0e1e2d;
+// @curiousBlue: #2a85c3;
+// @halfBaked: #74b3ce;
+// @aquaHaze: #e8f1f2;
+// @sushi: #72a23a;
+@cinder: #1a1423;
+@martinique: #3d314a;
+@americano: #85756e;
+@ecru-white: #f2ecdd;
+@wafer: #ddd1c7;
+
 @salem: #088d46;
-@funGreen: #066331;
-@eggShell: #f8f0d7;
+@fun-green: #066331;
+@egg-shell: #f8f0d7;
 @coal: #353535;
-@attention-color: @salem;
-@attention-border: @funGreen;
-@bg-color: @eggShell;
+   // Colors //
+@attention-color: @americano;
+@attention-border: @martinique;
+@subtle-border: @wafer;
+@bg-color: @ecru-white;
 @dark-text: @coal;
-@light-text: @eggShell;
+@light-text: @ecru-white;
 @link: @light-text;
 @link-visited: @light-text;
-@link-hover: coral;
-// @link-active: coral;
+// @link-visited: @attention-border;
+@link-hover: @wafer;
 
 // Mixins //
 .header-text() {
@@ -122,7 +135,7 @@ h2 {
 h3 {
    .header-text;
    font-size: 1.872rem;
-   margin: 1.6rem 0;
+   margin: 2rem 0 1rem;
 }
 h4 {
    .header-text;
@@ -182,8 +195,12 @@ h6 {
       flex-wrap: nowrap;
       width: 100%;
 
+      .intro {
+         text-align: center;
+      }
+
       section {
-         border: 2px solid cyan;
+         // border: 2px solid cyan;
          width: 39%;
 
          img {
@@ -193,40 +210,46 @@ h6 {
             width: 15rem;
          }
 
-         .name {
+         .heading {
             background-color: @attention-border;
             padding: 0.7rem 0;
             text-align: center;
-
-            .titles {
-               border-top: 1px solid @eggShell;
-               margin: 0.5rem 0;
-               display: flex;
-               justify-content: space-between;
-
-               span {
-                  font-style: italic;
-               }
-            }
          }
 
-         ul {
-            font-size: 1.6rem;
-            font-style: italic;
-            font-weight: normal;
-            list-style-type: circle;
-            padding: 1.6rem 0;
+         // ul {
+         //    font-size: 1.6rem;
+         //    font-style: italic;
+         //    font-weight: normal;
+         //    // list-style-type: circle;
+         //    padding: 1.6rem 0;
 
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-between;
-         }
+         //    display: flex;
+         //    flex-flow: column wrap;
+         //    justify-content: space-between;
+         // }
       }
    
       .profile {
          background-color: @bg-color;
          color: @dark-text;
          width: 69%;
+
+         .titles {
+            background-color: @subtle-border;
+            font-weight: bold;
+            padding: 1rem;
+
+            display: flex;
+            justify-content: space-between;
+
+            li {
+               font-style: italic;
+            }
+         }
+
+         .profile-info {
+            padding: 0 1rem 1rem;
+         }
       }
    }
 
