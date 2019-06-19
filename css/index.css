@@ -214,17 +214,41 @@ h6 {
 .content header nav a:hover {
   color: coral;
 }
-.content section {
+.content .table-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  /** this class will center text within the .table-wrapper **/
+}
+.content .table-wrapper .center {
+  text-align: center;
+}
+.content .table-wrapper section {
   border: 2px solid cyan;
-  width: 40%;
+  width: 39%;
 }
-.content section img {
-  width: 10rem;
-  border-radius: 100%;
+.content .table-wrapper section img {
+  border: 0.7rem solid #066331;
+  border-radius: 49%;
+  margin: 2rem;
+  width: 15rem;
 }
-.content .profile {
+.content .table-wrapper section .heading {
+  background-color: #066331;
+  padding: 0.7rem 0;
+  text-align: center;
+}
+.content .table-wrapper section ul {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: normal;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.content .table-wrapper .profile {
   background-color: #f8f0d7;
   color: #353535;
+  width: 69%;
 }
 .content footer {
   height: 6rem;

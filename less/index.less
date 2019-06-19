@@ -74,9 +74,11 @@ html, body {
 @body-font: 'Cabin', Sans-Serif;
    // Colors //
 @salem: #088d46;
+@funGreen: #066331;
 @eggShell: #f8f0d7;
 @coal: #353535;
 @attention-color: @salem;
+@attention-border: @funGreen;
 @bg-color: @eggShell;
 @dark-text: @coal;
 @light-text: @eggShell;
@@ -174,19 +176,48 @@ h6 {
       }
    }
 
-   section {
-      border: 2px solid cyan;
-      width: 40%;
+   .table-wrapper {
+      display: flex;
+      flex-flow: column wrap;
 
-      img {
-         width: 10rem;
-         border-radius: 100%;
+      /** this class will center text within the .table-wrapper **/
+      .center {
+         text-align: center;
       }
-   }
 
-   .profile {
-      background-color: @bg-color;
-      color: @dark-text;
+      section {
+         border: 2px solid cyan;
+         width: 39%;
+   
+         img {
+            border: 0.7rem solid @attention-border;
+            border-radius: 49%;
+            margin: 2rem;
+            width: 15rem;
+         }
+
+         .heading {
+            background-color: @attention-border;
+            padding: 0.7rem 0;
+            text-align: center;
+         }
+
+         ul {
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: normal;
+            padding: 1.6rem 0;
+
+            display: flex;
+            justify-content: space-between;
+         }
+      }
+   
+      .profile {
+         background-color: @bg-color;
+         color: @dark-text;
+         width: 69%;
+      }
    }
 
    footer {
