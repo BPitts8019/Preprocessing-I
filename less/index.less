@@ -210,11 +210,62 @@ h6 {
             display: flex;
          }
 
-         img {
-            border: 0.7rem solid @attention-border;
-            border-radius: 49%;
-            margin: 2.5rem;
-            width: 19rem;
+         .intro-pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: @mobile-screen) {
+               margin-top: 1.072rem;
+               width: 39%;
+            }
+
+            img {
+               border: 0.8rem solid @attention-border;
+               border-radius: 49%;
+               margin: 2.5rem;
+               width: 25rem;
+
+               @media only screen and (max-width: @mobile-screen) {
+                  margin: 0;
+               }
+            }
+         }
+
+         .intro-info {
+            @media only screen and (max-width: @mobile-screen) {
+               width: 100%;
+            }
+
+            address {
+               @media only screen and (max-width: @mobile-screen) {
+                  display: flex;
+                  justify-content: space-evenly;
+                  padding-bottom: 1.6rem;
+               }
+            }
+
+            .skills-info {
+               ul {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+
+                  li {
+                     padding: 0.75rem 0;
+                     width: 33%;
+
+                     @media only screen and (max-width: @mobile-screen) {
+                        padding: 0.5rem 0;
+                        width: 15%;
+                     }
+                  }
+               }
+
+               ul:last-child {
+                  padding-bottom: 1.5rem;
+               }
+            }
          }
       }
 

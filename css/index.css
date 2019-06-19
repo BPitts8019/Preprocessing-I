@@ -248,11 +248,57 @@ h6 {
     display: flex;
   }
 }
-.content .table-wrapper .intro img {
-  border: 0.7rem solid #3d314a;
+.content .table-wrapper .intro .intro-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .intro .intro-pic {
+    margin-top: 1.072rem;
+    width: 39%;
+  }
+}
+.content .table-wrapper .intro .intro-pic img {
+  border: 0.8rem solid #3d314a;
   border-radius: 49%;
   margin: 2.5rem;
-  width: 19rem;
+  width: 25rem;
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .intro .intro-pic img {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .intro .intro-info {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .intro .intro-info address {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1.6rem;
+  }
+}
+.content .table-wrapper .intro .intro-info .skills-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content .table-wrapper .intro .intro-info .skills-info ul li {
+  padding: 0.75rem 0;
+  width: 33%;
+}
+@media only screen and (max-width: 500px) {
+  .content .table-wrapper .intro .intro-info .skills-info ul li {
+    padding: 0.5rem 0;
+    width: 15%;
+  }
+}
+.content .table-wrapper .intro .intro-info .skills-info ul:last-child {
+  padding-bottom: 1.5rem;
 }
 .content .table-wrapper section .heading {
   background-color: #3d314a;
