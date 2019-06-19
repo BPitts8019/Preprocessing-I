@@ -239,7 +239,7 @@ h6 {
 }
 .content .table-wrapper .profile {
   background-color: #f2ecdd;
-  color: #353535;
+  color: #1a1423;
   width: 69%;
 }
 .content .table-wrapper .profile .titles {
@@ -259,4 +259,7 @@ h6 {
   height: 6rem;
   padding: 1rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -60,45 +60,32 @@ html, body {
 
 // Variables //
    // Fonts //
-   // Font-Family: 'Arvo', Serif;
-   // Font-Size: 44px;
-   // Font-Family: 'Lato', Sans-Serif;
-   // Font-Size: 16px;
-   //----------------------------------
-   // Font-Family: 'Roboto Condensed', Sans-Serif;
-   // Font-Size: 35px;
-   // Font-Family: 'Cabin', Sans-Serif;
-   // Font-Size: 16px;
-   
 @header-font: 'Roboto Condensed', Sans-Serif;
 @body-font: 'Cabin', Sans-Serif;
-   // Color Palette //
-// @firefly: #0e1e2d;
-// @curiousBlue: #2a85c3;
-// @halfBaked: #74b3ce;
-// @aquaHaze: #e8f1f2;
-// @sushi: #72a23a;
-@cinder: #1a1423;
-@martinique: #3d314a;
-@americano: #85756e;
-@ecru-white: #f2ecdd;
-@wafer: #ddd1c7;
 
-@salem: #088d46;
-@fun-green: #066331;
-@egg-shell: #f8f0d7;
-@coal: #353535;
+   // Color Palette //
+// @color-1: #0e1e2d;
+// @color-2: #2a85c3;
+// @color-3: #74b3ce;
+// @color-4: #e8f1f2;
+// @color-5: #72a23a;
+@color-1: #1a1423;
+@color-2: #3d314a;
+@color-3: #85756e;
+@color-4: #f2ecdd;
+@color-5: #ddd1c7;
+
    // Colors //
-@attention-color: @americano;
-@attention-border: @martinique;
-@subtle-border: @wafer;
-@bg-color: @ecru-white;
-@dark-text: @coal;
-@light-text: @ecru-white;
+@attention-color: @color-3;
+@attention-border: @color-2;
+@subtle-border: @color-5;
+@bg-color: @color-4;
+@dark-text: @color-1;
+@light-text: @color-4;
 @link: @light-text;
 @link-visited: @light-text;
 // @link-visited: @attention-border;
-@link-hover: @wafer;
+@link-hover: @subtle-border;
 
 // Mixins //
 .header-text() {
@@ -256,5 +243,9 @@ h6 {
    footer {
       // border: 2px solid magenta;
       .header-footer;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 }
